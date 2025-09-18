@@ -24,20 +24,28 @@
             <p id="welcomeText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum nesciunt placeat, corrupti culpa distinctio illum ipsam dolorem recusandae vero cumque enim. Ad nemo quas dolores qui minus nulla corrupti ipsa?</p>
             <img src="contents/Nickita Profile Picture black and white.png" alt="Profile picture of Nickita Danilovich" id="profilePic">
         </div>
-        <div id="navigation">
-            <button class="nav" onClick="document.getElementById('projectDisplay').scrollIntoView();">Projects</button>
-            <button class="nav" onClick="document.getElementById('titlePage').scrollIntoView();">About Me</button>
-            <button class="nav">Contact</button>
+        <div class="dropdown">
+            <button class="dropbtn">Dropdown Menu</button>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
         </div>
     </section>
 
     <section id="projectDisplay">
-            <img id="light" src="contents/light switch.png" alt="Light Switch"  onclick="document.getElementById('projectDisplay').style.backgroundColor = 'white';">
-
+        <!-- <img id="light" src="contents/light switch.png" alt="Light Switch"  onclick="document.getElementById('projectDisplay').style.backgroundColor = 'white';"> -->
+        <div class="stars"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
     </section>
-    <section id="aboutMe">
+    <!-- <section id="aboutMe">
 
-    </section>
+    </section> -->
 
 
 <script src="index.js"></script>
