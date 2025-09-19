@@ -63,24 +63,29 @@ section{
     max-width: 50vh;
     padding: 2%;
 }
+
+
 /* NAV BAR */
- .dropdown {
+ .navigation {
   position: relative;
   display: inline;
+  bottom: 95vh;
+  left: 5%;
 }
 
 /* Style the dropdown button */
-.dropbtn {
-  background-color: #4CAF50;
+.navbtn {
+  background-color: hsl(290, 56%, 38%);
   color: white;
   padding: 16px;
   font-size: 16px;
   border: none;
   cursor: pointer;
+  border-radius: 60px;
 }
 
 /* Dropdown content */
-.dropdown-content {
+.navContent {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
@@ -89,7 +94,7 @@ section{
 }
 
 /* Links inside dropdown content */
-.dropdown-content a {
+.navContent a {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
@@ -97,18 +102,18 @@ section{
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {
+.navContent a:hover {
   background-color: #f1f1f1
 }
 
 /* Show the dropdown content on hover */
-.dropdown:hover .dropdown-content {
+.navigation:hover .navContent {
   display: block;
 }
 
 /* Change background color of dropdown button on hover */
-.dropdown:hover .dropbtn {
-  background-color: #3e8e41;
+.navigation:hover .navbtn {
+  background-color: hsl(290, 73%, 57%);
 }
 
 /* #projectDisplay{
@@ -125,6 +130,8 @@ section{
     left: 80%;
     top: 50px;
 } */
+
+/* BACKGROUND FOR PROJECTS */
 #projectDisplay{
     min-height: 100vh;
     background: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);

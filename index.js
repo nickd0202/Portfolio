@@ -10,3 +10,19 @@ document.getElementById("light").onclick = function() {
         light = true;
     }
 }
+
+
+let navContents = document.getElementsByClassName('navContent');
+let menu = false;
+
+document.getElementsByClassName('navigation').onclick = function(){
+    if(menu){
+        for (let i = 0; i < navContents.length; i++) {
+            navContents[i].style.display = "none";
+        }
+    }else{
+        for (let i = 0; i < navContents.length; i++) {
+            navContents[i].style.display = "block";
+        }
+    }
+}
