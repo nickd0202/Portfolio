@@ -17,12 +17,13 @@ let menu = false;
 
 document.getElementsByClassName('navigation').onclick = function(){
     if(menu){
-        for (let i = 0; i < navContents.length; i++) {
-            navContents[i].style.display = "none";
-        }
+        navContents.style.display = "block";
+        menu = true;
     }else{
-        for (let i = 0; i < navContents.length; i++) {
-            navContents[i].style.display = "block";
-        }
+        // for (let i = 0; i < navContents.length; i++) {
+        //     navContents[i].style.display = "none";
+        // }
+        navContents.style.display = 'none';
+        menu = false;
     }
 }

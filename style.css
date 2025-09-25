@@ -107,14 +107,14 @@ section{
 }
 
 /* Show the dropdown content on hover */
-.navigation:hover .navContent {
+/* .navigation:hover .navContent {
   display: block;
-}
+} */
 
 /* Change background color of dropdown button on hover */
-.navigation:hover .navbtn {
+/* .navigation:hover .navbtn {
   background-color: hsl(290, 73%, 57%);
-}
+} */
 
 /* #projectDisplay{
     background-color: black;
@@ -136,7 +136,16 @@ section{
     min-height: 100vh;
     background: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
     overflow: hidden;
+    display: grid;
+    place-items: center;
+    position: relative;
 }
+.stars,
+.shooting-star {
+  z-index: 0;              /* NEW */
+}
+
+
 .stars {
   width: 1px;
   height: 1px;
@@ -220,4 +229,74 @@ section{
     27vw 88vh 1px white, 35vw 72vh 2px white, 43vw 85vh 1px white,
     51vw 92vh 2px white, 59vw 78vh 1px white;
   animation: twinkle 6s infinite linear reverse;
+}
+
+.projects {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.projects:active,
+.projects:hover {
+  outline: 0;
+}
+
+.projects a {
+  background-color: rgb(5, 6, 45);
+  padding: 100px 108px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms; 
+}
+.projects a:link {
+  text-decoration: none;
+}
+
+.projects:hover a {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .projects {
+    font-size: 24px;
+    min-width: 196px;
+  }
+}
+
+#projectDiv {
+  position: relative;
+  z-index: 1;                   
+  display: flex;                
+  flex-direction: row;          
+  flex-wrap: wrap;            
+  gap: 16px;                  
+  align-items: center;          
+  justify-content: center;      
+  padding: 10px;
 }
