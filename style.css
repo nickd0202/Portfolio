@@ -3,6 +3,9 @@
   margin: 0;
   padding: 0;
 }
+html{
+  scroll-behavior: smooth;
+}
 section{
     min-height: 100vh;
     max-height: 100vh;
@@ -86,14 +89,25 @@ section{
 
 /* Dropdown content */
 .navContent {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 200px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   display: none;                         
+   position: absolute;
+   background-color: #f9f9f9;
+   min-width: 200px;
+   box-shadow: 0 8px 16px rgba(0,0,0,.2);
+   z-index: 10;
+   margin-top: 8px;
+   border-radius: 8px;
+   overflow: hidden;
+}
+.navigation.open .navContent { 
+  display: block; 
 }
 
-/* Links inside dropdown content */
+.navbtn:focus-visible {
+  outline: 3px solid hsl(290 56% 38% / .6);
+  outline-offset: 2px;
+}
+
 .navContent a {
   color: black;
   padding: 12px 16px;
@@ -101,35 +115,11 @@ section{
   display: block;
 }
 
-/* Change color of dropdown links on hover */
+
 .navContent a:hover {
   background-color: #f1f1f1
 }
 
-/* Show the dropdown content on hover */
-/* .navigation:hover .navContent {
-  display: block;
-} */
-
-/* Change background color of dropdown button on hover */
-/* .navigation:hover .navbtn {
-  background-color: hsl(290, 73%, 57%);
-} */
-
-/* #projectDisplay{
-    background-color: black;
-    
-    transition: background-color 0.5s ease-in-out;
-}
-#light{
-    width: 12vh;
-    height: 15vh;
-    cursor: pointer;
-    display: inline;
-    position: relative;
-    left: 80%;
-    top: 50px;
-} */
 
 /* BACKGROUND FOR PROJECTS */
 #projectDisplay{
@@ -142,7 +132,7 @@ section{
 }
 .stars,
 .shooting-star {
-  z-index: 0;              /* NEW */
+  z-index: 0;              
 }
 
 

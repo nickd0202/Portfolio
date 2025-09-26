@@ -1,29 +1,35 @@
-let light = false;
+const nav = document.getElementById('nav');
+const navBtn = document.getElementById('navToggle');
+const navContent = document.getElementById('navContent');
 
-document.getElementById("light").onclick = function() {
-    if(light){
-        document.getElementById('projectDisplay').style.backgroundColor = 'black';
-        light = false;
-    }
-    else {
-        document.getElementById('projectDisplay').style.backgroundColor = 'hsl(192, 100%, 91%)';
-        light = true;
-    }
+function openNav() {
+  nav.classList.add('open');
+  navBtn.setAttribute('aria-expanded', 'true');
 }
-
-
-let navContents = document.getElementsByClassName('navContent');
-let menu = false;
-
-document.getElementsByClassName('navigation').onclick = function(){
-    if(menu){
-        navContents.style.display = "block";
-        menu = true;
-    }else{
-        // for (let i = 0; i < navContents.length; i++) {
-        //     navContents[i].style.display = "none";
-        // }
-        navContents.style.display = 'none';
-        menu = false;
-    }
+function closeNav() {
+  nav.classList.remove('open');
+  navBtn.setAttribute('aria-expanded', 'false');
 }
+function toggleNav() {
+  nav.classList.contains('open') ? closeNav() : openNav();
+}
+navBtn.addEventListener('click', (e) => {
+  e.stopPropagation();   // don't trigger the outside-click close immediately
+  toggleNav();
+});
+document.addEventListener('click', (e) => {
+  if (nav.classList.contains('open') && !nav.contains(e.target)) closeNav();
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeNav();
+});
+navContent.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+
+document.getElementById('projectsLink').addEventListener('click', e => {
+  e.preventDefault();
+  document.getElementById('projectDisplay')
+          .scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+window.addEventListener('load', () => {
+    window.scrollTo(0, 0);
+  });

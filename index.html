@@ -13,23 +13,23 @@
 </head>
 
 <body>
-    <!-- <header>
-        <h1 id="name">Nickita Danilovich</h1>
-        <h3 id="position">&lt Software Developer &gt</h3>
-    </header> -->
     <section id="titlePage">
         <div id="titles">
             <h1 id="name">Nickita Danilovich</h1>
-            <h3 id="position">&lt Software Developer &gt</h3>
+            <h3 id="position">&lt Web Developer &gt</h3>
             <p id="welcomeText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum nesciunt placeat, corrupti culpa distinctio illum ipsam dolorem recusandae vero cumque enim. Ad nemo quas dolores qui minus nulla corrupti ipsa?</p>
             <img src="contents/Nickita Profile Picture black and white.png" alt="Profile picture of Nickita Danilovich" id="profilePic">
         </div>
-        <div class="navigation">
-            <button class="navbtn">Menu</button>
-            <div class="navContent">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
+
+        <div class="navigation" id="nav">
+            <button class="navbtn" id="navToggle" aria-expanded="false" aria-controls="navContent">
+                Menu
+            </button>
+
+            <div class="navContent" id="navContent">
+                <a href="/" id="projectsLink">Projects</a>
+                <!-- <a href="/">About Me</a> -->
+                <a href="contents/Nickita Danilovich Resume.pdf" download="Nickita_Danilovich_Resume">Download Resume (PDF)</a>
             </div>
         </div>
     </section>
@@ -46,17 +46,21 @@
         
         <div id="projectDiv">
             <button class="projects">
-                <a href="https://github.com/nickd0202/QuestForge" target="_blank">Quest Forge</a>
+                <a href="https://github.com/nickd0202/QuestForge" target="_blank">Quest Forge
+                    <!-- <p>QuestForge is a small side project I’m building to learn full stack patterns by making productivity feel like an RPG. You complete tasks to earn XP and level up.</p> -->
+                </a>
             </button>
             <button class="projects">
-                <a href="https://github.com/nickd0202/Spotify-Liked-Songs-Sorter" target="_blank">Spotify Song Sorter</a>
+                <a href="https://github.com/nickd0202/Spotify-Liked-Songs-Sorter" target="_blank">Spotify Song Sorter
+                    <!-- <p>This script turns your Liked Songs into different genre oriented playlists.</p> -->
+                </a>
             </button>
 
         </div>
     </section>
-    <!-- <section id="aboutMe">
-
-    </section> -->
+    <footer>
+        
+    </footer>
 
 
 <script src="index.js"></script>
