@@ -13,7 +13,6 @@ html{
 }
 section{
     min-height: 100vh;
-    max-height: 100vh;
     padding: 0;
 }
 #titlePage{
@@ -23,6 +22,11 @@ section{
     background-attachment: fixed; /* comment this line to make the image still */
     background-size: cover;
     padding-top: 1px;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+  #titlePage { background-attachment: scroll; }
 }
 
 #name{
@@ -72,13 +76,17 @@ section{
 
 /* NAV BAR */
  .navigation {
-  position: relative;
+  /* position: relative; */
   display: inline;
-  bottom: 95vh;
+  /* bottom: 95vh; */
+  /* left: 5%; */
+  /* position: absolute; top: 2rem; left: 5%; */
+  position: absolute; 
+  top: 100px; 
   left: 5%;
 }
 
-/* Style the dropdown button */
+
 .navbtn {
   background-image: linear-gradient(144deg,hsl(275, 100%, 63%), hsl(248, 88%, 61%) 50%,hsl(184, 100%, 46%));
   color: white;
@@ -120,7 +128,6 @@ section{
   display: block;
 }
 
-/* rgb(250, 224, 255) */
 .navContent a:hover {
   background-image:  linear-gradient(144deg,hsl(184, 100%, 66%), hsl(248, 88%, 81%) 50%,hsl(275, 100%, 83%));
 }
@@ -219,7 +226,7 @@ section{
   }
 }
 
-/* Respect users who prefer reduced motion */
+
 @media (prefers-reduced-motion: reduce) {
   .stars, .stars::after, .shootingStar { animation: none !important; }
 }
@@ -234,22 +241,20 @@ section{
   box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
   box-sizing: border-box;
   color: #FFFFFF;
-  display: flex;
   font-family: "Fira Code", monospace;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
   text-align: center;
-  justify-content: center;
   line-height: 1em;
   max-width: 100%;
   min-width: 140px;
   padding: 3px;
   text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
+  /* user-select: none; */
+  /* -webkit-user-select: none; */
+  /* touch-action: manipulation; */
+  /* white-space: nowrap; */
   cursor: pointer;
 }
 
@@ -294,16 +299,32 @@ section{
   padding: 10px;
 }
 
-.description{
-
+.projectItem{
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 8px;
 }
 
-#desc1{
-
+.description {
+  display: none;               
+  color: #000;
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px 18px;
+  max-width: 36ch;
+  margin-top: 10px;            
+  line-height: 1.4;
+  box-shadow: 0 8px 18px rgba(0,0,0,.18);
+  z-index: 2;                  
+  opacity: 0;
+  transition: opacity 150ms ease;
 }
-
-#desc2{
-  
+.projectItem:hover .description,
+.projectItem:focus-within .description{
+  display: block;
+  opacity: 1;
 }
 
 /* FOOTER */
