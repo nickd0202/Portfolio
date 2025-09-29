@@ -1,3 +1,4 @@
+// Menu button
 const nav = document.getElementById('nav');
 const navBtn = document.getElementById('navToggle');
 const navContent = document.getElementById('navContent');
@@ -14,7 +15,7 @@ function toggleNav() {
   nav.classList.contains('open') ? closeNav() : openNav();
 }
 navBtn.addEventListener('click', (e) => {
-  e.stopPropagation();   // don't trigger the outside-click close immediately
+  e.stopPropagation();  
   toggleNav();
 });
 document.addEventListener('click', (e) => {
@@ -25,6 +26,7 @@ document.addEventListener('keydown', (e) => {
 });
 navContent.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
 
+// Project Links
 document.getElementById('projectsLink').addEventListener('click', e => {
   e.preventDefault();
   document.getElementById('projectDisplay')
@@ -33,3 +35,9 @@ document.getElementById('projectsLink').addEventListener('click', e => {
 window.addEventListener('load', () => {
     window.scrollTo(0, 0);
   });
+
+
+
+
+
+  document.getElementById('year').textContent = new Date().getFullYear();
